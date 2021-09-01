@@ -9,6 +9,7 @@
 `[pfx]cog install wraith-cogs <cog-name>`
 
 # Included Cogs
+
 ### Roleplay
 
 * `[pfx]cuddle` - Cuddles a user.
