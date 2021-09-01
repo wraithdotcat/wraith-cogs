@@ -4,9 +4,9 @@
 
 `[pfx]` is your prefix.
 
-`[pfx]repo add Jintaku-Cogs https://github.com/Jintaku/Jintaku-Cogs-V3/`
+`[pfx]repo add wraith-cogs https://github.com/wraithfx/wraith-cogs/`
 
-`[pfx]cog install Jintaku-Cogs <cog-name>`
+`[pfx]cog install wraith-cogs <cog-name>`
 
 # Included Cogs
 ### Roleplay
