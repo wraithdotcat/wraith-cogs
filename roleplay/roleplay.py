@@ -19,222 +19,219 @@ BaseCog = getattr(commands, "Cog", object)
 
 
 class Roleplay(BaseCog):
-    """Interact with people!"""
+    """Visualize how you feel about another server member!"""
 
     def __init__(self):
         self.config = Config.get_conf(self, identifier=842364413)
         default_global = {
             "hugs": [
-                "https://p.wraif.com/roleplay/hug/image_0.gif",
-                "https://p.wraif.com/roleplay/hug/image_1.gif",
-                "https://p.wraif.com/roleplay/hug/image_2.gif",
-                "https://p.wraif.com/roleplay/hug/image_3.gif",
-                "https://p.wraif.com/roleplay/hug/image_4.gif",
-                "https://p.wraif.com/roleplay/hug/image_5.gif",
-                "https://p.wraif.com/roleplay/hug/image_6.gif",
-                "https://p.wraif.com/roleplay/hug/image_7.gif",
-                "https://p.wraif.com/roleplay/hug/image_8.gif",
-                "https://p.wraif.com/roleplay/hug/image_9.gif",
-                "https://p.wraif.com/roleplay/hug/image_10.gif",
-                "https://p.wraif.com/roleplay/hug/image_11.gif",
-                "https://p.wraif.com/roleplay/hug/image_12.gif",
-                "https://p.wraif.com/roleplay/hug/image_13.gif",
-                "https://p.wraif.com/roleplay/hug/image_14.gif",
-                "https://p.wraif.com/roleplay/hug/image_15.gif",
-                "https://p.wraif.com/roleplay/hug/image_16.gif",
-                "https://p.wraif.com/roleplay/hug/image_17.gif",
-                "https://p.wraif.com/roleplay/hug/image_18.gif",
-                "https://p.wraif.com/roleplay/hug/image_19.gif",
-                "https://p.wraif.com/roleplay/hug/image_20.gif",
-                "https://p.wraif.com/roleplay/hug/image_21.gif",
-                "https://p.wraif.com/roleplay/hug/image_22.gif",
-                "https://p.wraif.com/roleplay/hug/image_23.gif",
-                "https://p.wraif.com/roleplay/hug/image_24.gif",
-                "https://p.wraif.com/roleplay/hug/image_25.gif",
-                "https://p.wraif.com/roleplay/hug/image_26.gif",
-                "https://p.wraif.com/roleplay/hug/image_27.gif",
-                "https://p.wraif.com/roleplay/hug/image_28.gif",
-                "https://p.wraif.com/roleplay/hug/image_29.gif",
-                "https://p.wraif.com/roleplay/hug/image_30.gif",
+                "https://i.imgur.com/FPvOYqa.gif",
+                "https://i.imgur.com/QKxKEAS.gif",
+                "https://i.imgur.com/ORpj4oh.gif",
+                "https://i.imgur.com/zgMthmR.gif",
+                "https://i.imgur.com/LFvZTXK.gif",
+                "https://i.imgur.com/7iU9yKl.gif",
+                "https://i.imgur.com/qWs53hx.gif",
+                "https://i.imgur.com/cXQBhR8.gif",
+                "https://i.imgur.com/jKWwoCP.gif",
+                "https://i.imgur.com/QE7beNU.gif",
+                "https://i.imgur.com/TPEaz1K.gif",
+                "https://i.imgur.com/ERP0QBz.gif",
+                "https://i.imgur.com/oXGxjDV.gif",
+                "https://i.imgur.com/bgTPAb7.gif",
+                "https://i.imgur.com/1UxrDyn.gif",
+                "https://i.imgur.com/gaeEk33.gif",
+                "https://i.imgur.com/xd9HvFF.gif",
+                "https://i.imgur.com/rPF3Oe0.gif",
+                "https://i.imgur.com/ClKOoEk.gif",
+                "https://i.imgur.com/8CAlNEI.gif",
+                "https://i.imgur.com/LNIFLtB.gif",
+                "https://i.imgur.com/Y8SDkCb.gif",
+                "https://i.imgur.com/QPXwNcA.gif",
+                "https://i.imgur.com/HW9gfMz.gif",
+                "https://i.imgur.com/Kh1z7qB.gif",
+                "https://i.imgur.com/UERNFHD.gif",
+                "https://i.imgur.com/z8KhrpB.gif",
+                "https://i.imgur.com/fqHt7Gy.gif",
+                "https://i.imgur.com/Pr6b9iU.gif",
+                "https://i.imgur.com/56o6qlI.gif",
+                "https://i.imgur.com/JjAgyfK.gif",
             ],
             "cuddle": [
-                "https://p.wraif.com/roleplay/cuddle/image_0.gif",
-                "https://p.wraif.com/roleplay/cuddle/image_1.gif",
-                "https://p.wraif.com/roleplay/cuddle/image_2.gif",
-                "https://p.wraif.com/roleplay/cuddle/image_3.gif",
-                "https://p.wraif.com/roleplay/cuddle/image_4.gif",
-                "https://p.wraif.com/roleplay/cuddle/image_5.gif",
-                "https://p.wraif.com/roleplay/cuddle/image_6.gif",
-                "https://p.wraif.com/roleplay/cuddle/image_7.gif",
-                "https://p.wraif.com/roleplay/cuddle/image_8.gif",
-                "https://p.wraif.com/roleplay/cuddle/image_9.gif",
-                "https://p.wraif.com/roleplay/cuddle/image_10.gif",
-                "https://p.wraif.com/roleplay/cuddle/image_11.gif",
-                "https://p.wraif.com/roleplay/cuddle/image_12.gif",
-                "https://p.wraif.com/roleplay/cuddle/image_13.gif",
-                "https://p.wraif.com/roleplay/cuddle/image_14.gif",
-                "https://p.wraif.com/roleplay/cuddle/image_15.gif",
-                "https://p.wraif.com/roleplay/cuddle/image_16.gif",
-                "https://p.wraif.com/roleplay/cuddle/image_17.gif",
-                "https://p.wraif.com/roleplay/cuddle/image_18.gif",
-                "https://p.wraif.com/roleplay/cuddle/image_19.gif",
-                "https://p.wraif.com/roleplay/cuddle/image_20.gif",
-                "https://p.wraif.com/roleplay/cuddle/image_21.gif",
-                "https://p.wraif.com/roleplay/cuddle/image_22.gif",
+                "https://i.imgur.com/AoUxZwe.gif",
+                "https://i.imgur.com/YDkJ1Zk.gif",
+                "https://i.imgur.com/jYOzJUD.gif",
+                "https://i.imgur.com/5AKULoB.gif",
+                "https://i.imgur.com/JqPgf05.gif",
+                "https://i.imgur.com/rwvrqjT.gif",
+                "https://i.imgur.com/UcbwNLj.gif",
+                "https://i.imgur.com/CInJAGu.gif",
+                "https://i.imgur.com/1lX1GCg.gif",
+                "https://i.imgur.com/425uAS1.gif",
+                "https://i.imgur.com/gupvoLu.gif",
+                "https://i.imgur.com/FlZ2x3M.gif",
+                "https://i.imgur.com/D00KyVg.gif",
+                "https://i.imgur.com/UZ7BVXq.gif",
+                "https://i.imgur.com/R78xquZ.gif",
+                "https://i.imgur.com/3ZR8Cty.gif",
+                "https://i.imgur.com/CJHyJ1m.gif",
+                "https://i.imgur.com/0i3lgwE.gif",
+                "https://i.imgur.com/sx2O2Cr.gif",
+                "https://i.imgur.com/f1Exs7G.gif",
+                "https://i.imgur.com/2X8e2b1.gif",
+                "https://i.imgur.com/zs4oS0j.gif",
             ],
             "pat": [
-                "https://p.wraif.com/roleplay/pat/image_0.gif",
-                "https://p.wraif.com/roleplay/pat/image_1.gif",
-                "https://p.wraif.com/roleplay/pat/image_2.gif",
-                "https://p.wraif.com/roleplay/pat/image_3.gif",
-                "https://p.wraif.com/roleplay/pat/image_4.gif",
-                "https://p.wraif.com/roleplay/pat/image_5.gif",
-                "https://p.wraif.com/roleplay/pat/image_6.gif",
-                "https://p.wraif.com/roleplay/pat/image_7.gif",
-                "https://p.wraif.com/roleplay/pat/image_8.gif",
-                "https://p.wraif.com/roleplay/pat/image_9.gif",
-                "https://p.wraif.com/roleplay/pat/image_10.gif",
-                "https://p.wraif.com/roleplay/pat/image_11.gif",
-                "https://p.wraif.com/roleplay/pat/image_12.gif",
-                "https://p.wraif.com/roleplay/pat/image_13.gif",
-                "https://p.wraif.com/roleplay/pat/image_14.gif",
-                "https://p.wraif.com/roleplay/pat/image_15.gif",
-                "https://p.wraif.com/roleplay/pat/image_16.gif",
-                "https://p.wraif.com/roleplay/pat/image_17.gif",
-                "https://p.wraif.com/roleplay/pat/image_18.gif",
-                "https://p.wraif.com/roleplay/pat/image_19.gif",
-                "https://p.wraif.com/roleplay/pat/image_20.gif",
-                "https://p.wraif.com/roleplay/pat/image_21.gif",
-                "https://p.wraif.com/roleplay/pat/image_22.gif",
-                "https://p.wraif.com/roleplay/pat/image_23.gif",
-                "https://p.wraif.com/roleplay/pat/image_24.gif",
-                "https://p.wraif.com/roleplay/pat/image_25.gif",
-                "https://p.wraif.com/roleplay/pat/image_26.gif",
-                "https://p.wraif.com/roleplay/pat/image_27.gif",
-                "https://p.wraif.com/roleplay/pat/image_28.gif",
-                "https://p.wraif.com/roleplay/pat/image_29.gif",
-                "https://p.wraif.com/roleplay/pat/image_30.gif",
+                "https://i.imgur.com/Krbwuma.gif",
+                "https://i.imgur.com/iHkJYzX.gif",
+                "https://i.imgur.com/jFjuATR.gif",
+                "https://i.imgur.com/s36dhpY.gif",
+                "https://i.imgur.com/4yluT9x.gif",
+                "https://i.imgur.com/daD1oDy.gif",
+                "https://i.imgur.com/haJAkzh.gif",
+                "https://i.imgur.com/Qv3p72M.gif",
+                "https://i.imgur.com/smEoqaI.gif",
+                "https://i.imgur.com/lkpSbWh.gif",
+                "https://i.imgur.com/qtQb40i.gif",
+                "https://i.imgur.com/zV0bw2l.gif",
+                "https://i.imgur.com/f9nRmte.gif",
+                "https://i.imgur.com/0vXbqks.gif",
+                "https://i.imgur.com/16Ivt5t.gif",
+                "https://i.imgur.com/0kemtyB.gif",
+                "https://i.imgur.com/feQa4yA.gif",
+                "https://i.imgur.com/JD37S4l.gif",
+                "https://i.imgur.com/93IkVQV.gif",
+                "https://i.imgur.com/o7zNG88.gif",
+                "https://i.imgur.com/jy3AMFH.gif",
+                "https://i.imgur.com/gT8lBRI.gif",
+                "https://i.imgur.com/1b6h74a.gif",
+                "https://i.imgur.com/eJmG6CZ.gif",
+                "https://i.imgur.com/8x2tc9W.gif",
+                "https://i.imgur.com/4giD9G6.gif",
+                "https://i.imgur.com/k1PCssc.gif",
+                "https://i.imgur.com/P3n1xdV.gif",
+                "https://i.imgur.com/8Uzbd31.gif",
+                "https://i.imgur.com/qNEaX3v.gif",
+                "https://i.imgur.com/UFuOmuK.gif",
             ],
             "highfive": [
-                "https://p.wraif.com/roleplay/highfive/image_0.gif",
-                "https://p.wraif.com/roleplay/highfive/image_1.gif",
-                "https://p.wraif.com/roleplay/highfive/image_2.gif",
-                "https://p.wraif.com/roleplay/highfive/image_3.gif",
-                "https://p.wraif.com/roleplay/highfive/image_4.gif",
-                "https://p.wraif.com/roleplay/highfive/image_5.gif",
-                "https://p.wraif.com/roleplay/highfive/image_6.gif",
-                "https://p.wraif.com/roleplay/highfive/image_7.gif",
-                "https://p.wraif.com/roleplay/highfive/image_8.gif",
-                "https://p.wraif.com/roleplay/highfive/image_9.gif",
-                "https://p.wraif.com/roleplay/highfive/image_10.gif",
-                "https://p.wraif.com/roleplay/highfive/image_11.gif",
+                "https://i.imgur.com/KbU5Pft.gif",
+                "https://i.imgur.com/msaAy1n.gif",
+                "https://i.imgur.com/3doLDJr.gif",
+                "https://i.imgur.com/Nrs9aD2.gif",
+                "https://i.imgur.com/eR0UT2B.gif",
+                "https://i.imgur.com/yRP8dLA.gif",
+                "https://i.imgur.com/XUs5sJW.gif",
+                "https://i.imgur.com/jblvzO2.gif",
+                "https://i.imgur.com/HIs6iaL.gif",
+                "https://i.imgur.com/2hrqVm2.gif",
+                "https://i.imgur.com/rH6WPu9.gif",
+                "https://i.imgur.com/tct5DZY.gif",
             ],
             "poke": [
-                "https://p.wraif.com/roleplay/poke/image_0.gif",
-                "https://p.wraif.com/roleplay/poke/image_1.gif",
-                "https://p.wraif.com/roleplay/poke/image_2.gif",
-                "https://p.wraif.com/roleplay/poke/image_3.gif",
-                "https://p.wraif.com/roleplay/poke/image_4.gif",
-                "https://p.wraif.com/roleplay/poke/image_5.gif",
-                "https://p.wraif.com/roleplay/poke/image_6.gif",
-                "https://p.wraif.com/roleplay/poke/image_7.gif",
+                "https://i.imgur.com/QW0DTro.gif",
+                "https://i.imgur.com/65DeDmw.gif",
+                "https://i.imgur.com/BsvwZ51.gif",
+                "https://i.imgur.com/WIXpOBw.gif",
+                "https://i.imgur.com/C7YY0Kw.gif",
+                "https://i.imgur.com/wK0gTyH.gif",
+                "https://i.imgur.com/r9BSt4r.gif",
+                "https://i.imgur.com/gr3dZn6.gif",
             ],
             "tickle": [
-                "https://p.wraif.com/roleplay/tickle/image_0.gif",
-                "https://p.wraif.com/roleplay/tickle/image_1.gif",
-                "https://p.wraif.com/roleplay/tickle/image_2.gif",
+                "https://i.imgur.com/lfWmiz1.gif",
+                "https://i.imgur.com/pd74qBN.gif",
+                "https://i.imgur.com/eVzjWLH.gif",
             ],
             "kiss": [
-                "https://p.wraif.com/roleplay/kiss/image_0.gif",
-                "https://p.wraif.com/roleplay/kiss/image_1.gif",
-                "https://p.wraif.com/roleplay/kiss/image_2.gif",
-                "https://p.wraif.com/roleplay/kiss/image_3.gif",
-                "https://p.wraif.com/roleplay/kiss/image_4.gif",
-                "https://p.wraif.com/roleplay/kiss/image_5.gif",
+                "https://i.imgur.com/r4iBI92.gif",
+                "https://i.imgur.com/G9I8KD6.gif",
+                "https://i.imgur.com/iwBcqBe.gif",
+                "https://i.imgur.com/0DygwFd.gif",
+                "https://i.imgur.com/mZ9RecX.gif",
+                "https://i.imgur.com/NIqCpgb.gif",
             ],
             "lick": [
-                "https://p.wraif.com/roleplay/lick/image_0.gif",
-                "https://p.wraif.com/roleplay/lick/image_1.gif",
-                "https://p.wraif.com/roleplay/lick/image_2.gif",
-                "https://p.wraif.com/roleplay/lick/image_3.gif",
-                "https://p.wraif.com/roleplay/lick/image_4.gif",
-                "https://p.wraif.com/roleplay/lick/image_5.gif",
-                "https://p.wraif.com/roleplay/lick/image_6.gif",
-                "https://p.wraif.com/roleplay/lick/image_7.gif",
-                "https://p.wraif.com/roleplay/lick/image_8.gif",
-                "https://p.wraif.com/roleplay/lick/image_9.gif",
-                "https://p.wraif.com/roleplay/lick/image_10.gif",
+                "https://i.imgur.com/MPZPNai.gif",
+                "https://i.imgur.com/jVj7x9S.gif",
+                "https://i.imgur.com/aTVHfBu.gif",
+                "https://i.imgur.com/UYHypBp.gif",
+                "https://i.imgur.com/LkCJ2Xt.gif",
+                "https://i.imgur.com/KvhzX8f.gif",
+                "https://i.imgur.com/DsBeUy3.gif",
+                "https://i.imgur.com/OYoRz58.gif",
+                "https://i.imgur.com/NBFtHD4.gif",
+                "https://i.imgur.com/q8GDISZ.gif",
+                "https://i.imgur.com/q8GDISZ.gif",
             ],
             "feed": [
-                "https://p.wraif.com/roleplay/feed/image_0.gif",
-                "https://p.wraif.com/roleplay/feed/image_1.gif",
-                "https://p.wraif.com/roleplay/feed/image_2.gif",
-                "https://p.wraif.com/roleplay/feed/image_3.gif",
-                "https://p.wraif.com/roleplay/feed/image_4.gif",
-                "https://p.wraif.com/roleplay/feed/image_5.gif",
-                "https://p.wraif.com/roleplay/feed/image_6.gif",
-                "https://p.wraif.com/roleplay/feed/image_7.gif",
-                "https://p.wraif.com/roleplay/feed/image_8.gif",
-                "https://p.wraif.com/roleplay/feed/image_9.gif",
-                "https://p.wraif.com/roleplay/feed/image_10.gif",
+                "https://i.imgur.com/8Tq7KJL.gif",
+                "https://i.imgur.com/i9WaXtI.gif",
+                "https://i.imgur.com/1qTADFG.gif",
+                "https://i.imgur.com/f7Iu5RS.gif",
+                "https://i.imgur.com/rzbXbfZ.gif",
+                "https://i.imgur.com/Nlg2x4q.gif",
+                "https://i.imgur.com/FrYwLM3.gif",
+                "https://i.imgur.com/XgOMoea.gif",
+                "https://i.imgur.com/GKo090F.gif",
+                "https://i.imgur.com/iJeyFdK.gif",
+                "https://i.imgur.com/U5L8E7K.gif",
+
             ],
             "smug": [
-                "https://p.wraif.com/roleplay/smug/image_0.gif",
-                "https://p.wraif.com/roleplay/smug/image_1.gif",
-                "https://p.wraif.com/roleplay/smug/image_2.gif",
-                "https://p.wraif.com/roleplay/smug/image_3.gif",
-                "https://p.wraif.com/roleplay/smug/image_4.gif",
-                "https://p.wraif.com/roleplay/smug/image_5.gif",
+                "https://i.imgur.com/MMOdvqe.gif",
+                "https://i.imgur.com/OCK5Ov3.gif",
+                "https://i.imgur.com/l0i4eEn.gif",
+                "https://i.imgur.com/pnUmJKN.gif",
+                "https://i.imgur.com/ApQ1w7Z.gif",
+                "https://i.imgur.com/zepBEpi.gif",
             ],
             "kill": [
-                "https://p.wraif.com/roleplay/kill/image_0.gif",
-                "https://p.wraif.com/roleplay/kill/image_1.gif",
-                "https://p.wraif.com/roleplay/kill/image_2.gif",
-                "https://p.wraif.com/roleplay/kill/image_3.gif",
-                "https://p.wraif.com/roleplay/kill/image_4.gif",
+                "https://i.imgur.com/ieHshhZ.gif",
+                "https://i.imgur.com/wfzqB4x.gif",
+                "https://i.imgur.com/K0xevPY.gif",
+                "https://i.imgur.com/7wBThnE.gif",
             ],
             "slap": [
-                "https://p.wraif.com/roleplay/slap/image_0.gif",
-                "https://p.wraif.com/roleplay/slap/image_1.gif",
-                "https://p.wraif.com/roleplay/slap/image_2.gif",
-                "https://p.wraif.com/roleplay/slap/image_3.gif",
-                "https://p.wraif.com/roleplay/slap/image_4.gif",
-                "https://p.wraif.com/roleplay/slap/image_5.gif",
-                "https://p.wraif.com/roleplay/slap/image_6.gif",
-                "https://p.wraif.com/roleplay/slap/image_7.gif",
-                "https://p.wraif.com/roleplay/slap/image_8.gif",
-                "https://p.wraif.com/roleplay/slap/image_9.gif",
-                "https://p.wraif.com/roleplay/slap/image_10.gif",
-                "https://p.wraif.com/roleplay/slap/image_11.gif",
-                "https://p.wraif.com/roleplay/slap/image_12.gif",
-                "https://p.wraif.com/roleplay/slap/image_13.gif",
-                "https://p.wraif.com/roleplay/slap/image_14.gif",
-                "https://p.wraif.com/roleplay/slap/image_15.gif",
-                "https://p.wraif.com/roleplay/slap/image_16.gif",
-                "https://p.wraif.com/roleplay/slap/image_17.gif",
-                "https://p.wraif.com/roleplay/slap/image_18.gif",
-                "https://p.wraif.com/roleplay/slap/image_19.gif",
-                "https://p.wraif.com/roleplay/slap/image_20.gif",
-                "https://p.wraif.com/roleplay/slap/image_21.gif",
-                "https://p.wraif.com/roleplay/slap/image_22.gif",
-                "https://p.wraif.com/roleplay/slap/image_23.gif",
-                "https://p.wraif.com/roleplay/slap/image_24.gif",
-                "https://p.wraif.com/roleplay/slap/image_25.gif",
-                "https://p.wraif.com/roleplay/slap/image_26.gif",
-                "https://p.wraif.com/roleplay/slap/image_27.gif",
-                "https://p.wraif.com/roleplay/slap/image_28.gif",
-                "https://p.wraif.com/roleplay/slap/image_29.gif",
-                "https://p.wraif.com/roleplay/slap/image_30.gif",
-                "https://p.wraif.com/roleplay/slap/image_31.gif",
-                "https://p.wraif.com/roleplay/slap/image_32.gif",
-                "https://p.wraif.com/roleplay/slap/image_33.gif",
-                "https://p.wraif.com/roleplay/slap/image_34.gif",
+                "https://i.imgur.com/rKRaycj.gif",
+                "https://i.imgur.com/OlBxOml.gif",
+                "https://i.imgur.com/6sw5ucL.gif",
+                "https://i.imgur.com/Fjnsf0j.gif",
+                "https://i.imgur.com/RngQv7u.gif",
+                "https://i.imgur.com/SADBEV3.gif",
+                "https://i.imgur.com/Ox31Msx.gif",
+                "https://i.imgur.com/cDoPe2x.gif",
+                "https://i.imgur.com/oAL4wXL.gif",
+                "https://i.imgur.com/UFuTW36.gif",
+                "https://i.imgur.com/VKBwwhR.gif",
+                "https://i.imgur.com/1Yy3zaH.gif",
+                "https://i.imgur.com/ZUZfBsi.gif",
+                "https://i.imgur.com/48eOb2A.gif",
+                "https://i.imgur.com/hTEQFHL.gif",
+                "https://i.imgur.com/hzWtwzj.gif",
+                "https://i.imgur.com/Mc707zy.gif",
+                "https://i.imgur.com/tsM8C6X.gif",
+                "https://i.imgur.com/7cawfm0.gif",
+                "https://i.imgur.com/XmnjuIq.gif",
+                "https://i.imgur.com/CizyEdQ.gif",
+                "https://i.imgur.com/GMABVCv.gif",
+                "https://i.imgur.com/4wW750X.gif",
+                "https://i.imgur.com/4F7Ycdo.gif",
+                "https://i.imgur.com/Slv4ihq.gif",
+                "https://i.imgur.com/q5o6DB8.gif",
+                "https://i.imgur.com/eJSIQ0A.gif",
+                "https://i.imgur.com/mzhSHvb.gif",
+                "https://i.imgur.com/8XBRbGO.gif",
+                "https://i.imgur.com/Kro76dL.gif",
+                "https://i.imgur.com/A5abqyF.gif",
+                "https://i.imgur.com/K9UEId7.gif",
+                "https://i.imgur.com/YaInrP4.gif",
             ],
             "punch": [
-                "https://p.wraif.com/roleplay/punch/image_0.gif",
-                "https://p.wraif.com/roleplay/punch/image_1.gif",
-                "https://p.wraif.com/roleplay/punch/image_2.gif",
-                "https://p.wraif.com/roleplay/punch/image_3.gif",
+                "https://i.imgur.com/92N5CE2.gif",
+                "https://i.imgur.com/IFqj65R.gif",
+                "https://i.imgur.com/ccurJOw.gif",
+                "https://i.imgur.com/xK9xLTJ.gif",
             ],
         }
         self.config.register_global(**default_global)
@@ -246,17 +243,13 @@ class Roleplay(BaseCog):
 
         author = ctx.message.author
         images = await self.config.hugs()
-
-        nekos = await self.fetch_nekos_life(ctx, "hug")
-        images.extend(nekos)
-
         mn = len(images)
         i = randint(0, mn - 1)
 
         # Build Embed
         embed = discord.Embed()
         embed.description = f"**{author.mention} hugs {user.mention}**"
-        embed.set_footer(text="https://github.com/wraithfx/redbot-wraith")
+        embed.set_footer(text="レイス - \"Everything you can imagine is real.\"")
         embed.set_image(url=images[i])
         await ctx.send(embed=embed)
 
@@ -267,17 +260,13 @@ class Roleplay(BaseCog):
 
         author = ctx.message.author
         images = await self.config.cuddle()
-
-        nekos = await self.fetch_nekos_life(ctx, "cuddle")
-        images.extend(nekos)
-
         mn = len(images)
         i = randint(0, mn - 1)
 
         # Build Embed
         embed = discord.Embed()
         embed.description = f"**{author.mention} cuddles {user.mention}**"
-        embed.set_footer(text="https://github.com/wraithfx/redbot-wraith")
+        embed.set_footer(text="レイス - \"Everything you can imagine is real.\"")
         embed.set_image(url=images[i])
         await ctx.send(embed=embed)
 
@@ -288,17 +277,13 @@ class Roleplay(BaseCog):
 
         author = ctx.message.author
         images = await self.config.kiss()
-
-        nekos = await self.fetch_nekos_life(ctx, "kiss")
-        images.extend(nekos)
-
         mn = len(images)
         i = randint(0, mn - 1)
 
         # Build Embed
         embed = discord.Embed()
         embed.description = f"**{author.mention} kisses {user.mention}**"
-        embed.set_footer(text="https://github.com/wraithfx/redbot-wraith")
+        embed.set_footer(text="レイス - \"Everything you can imagine is real.\"")
         embed.set_image(url=images[i])
         await ctx.send(embed=embed)
 
@@ -309,17 +294,13 @@ class Roleplay(BaseCog):
 
         author = ctx.message.author
         images = await self.config.slap()
-
-        nekos = await self.fetch_nekos_life(ctx, "slap")
-        images.extend(nekos)
-
         mn = len(images)
         i = randint(0, mn - 1)
 
         # Build Embed
         embed = discord.Embed()
         embed.description = f"**{author.mention} slaps {user.mention}**"
-        embed.set_footer(text="https://github.com/wraithfx/redbot-wraith")
+        embed.set_footer(text="レイス - \"Everything you can imagine is real.\"")
         embed.set_image(url=images[i])
         await ctx.send(embed=embed)
 
@@ -330,17 +311,13 @@ class Roleplay(BaseCog):
 
         author = ctx.message.author
         images = await self.config.pat()
-
-        nekos = await self.fetch_nekos_life(ctx, "pat")
-        images.extend(nekos)
-
         mn = len(images)
         i = randint(0, mn - 1)
-
+        
         # Build Embed
         embed = discord.Embed()
         embed.description = f"**{author.mention} pats {user.mention}**"
-        embed.set_footer(text="https://github.com/wraithfx/redbot-wraith")
+        embed.set_footer(text="レイス - \"Everything you can imagine is real.\"")
         embed.set_image(url=images[i])
         await ctx.send(embed=embed)
 
@@ -357,7 +334,7 @@ class Roleplay(BaseCog):
         # Build Embed
         embed = discord.Embed()
         embed.description = f"**{author.mention} licks {user.mention}**"
-        embed.set_footer(text="https://github.com/wraithfx/redbot-wraith")
+        embed.set_footer(text="レイス - \"Everything you can imagine is real.\"")
         embed.set_image(url=images[i])
         await ctx.send(embed=embed)
 
@@ -374,7 +351,7 @@ class Roleplay(BaseCog):
         # Build Embed
         embed = discord.Embed()
         embed.description = f"**{author.mention} high-fives {user.mention}**"
-        embed.set_footer(text="https://github.com/wraithfx/redbot-wraith")
+        embed.set_footer(text="レイス - \"Everything you can imagine is real.\"")
         embed.set_image(url=images[i])
         await ctx.send(embed=embed)
 
@@ -385,17 +362,13 @@ class Roleplay(BaseCog):
 
         author = ctx.message.author
         images = await self.config.feed()
-
-        nekos = await self.fetch_nekos_life(ctx, "feed")
-        images.extend(nekos)
-
         mn = len(images)
         i = randint(0, mn - 1)
 
         # Build Embed
         embed = discord.Embed()
         embed.description = f"**{author.mention} feeds {user.mention}**"
-        embed.set_footer(text="https://github.com/wraithfx/redbot-wraith")
+        embed.set_footer(text="レイス - \"Everything you can imagine is real.\"")
         embed.set_image(url=images[i])
         await ctx.send(embed=embed)
 
@@ -406,17 +379,13 @@ class Roleplay(BaseCog):
 
         author = ctx.message.author
         images = await self.config.tickle()
-
-        nekos = await self.fetch_nekos_life(ctx, "tickle")
-        images.extend(nekos)
-
         mn = len(images)
         i = randint(0, mn - 1)
 
         # Build Embed
         embed = discord.Embed()
         embed.description = f"**{author.mention} tickles {user.mention}**"
-        embed.set_footer(text="https://github.com/wraithfx/redbot-wraith")
+        embed.set_footer(text="レイス - \"Everything you can imagine is real.\"")
         embed.set_image(url=images[i])
         await ctx.send(embed=embed)
 
@@ -427,17 +396,13 @@ class Roleplay(BaseCog):
 
         author = ctx.message.author
         images = await self.config.poke()
-
-        nekos = await self.fetch_nekos_life(ctx, "poke")
-        images.extend(nekos)
-
         mn = len(images)
         i = randint(0, mn - 1)
 
         # Build Embed
         embed = discord.Embed()
         embed.description = f"**{author.mention} pokes {user.mention}**"
-        embed.set_footer(text="https://github.com/wraithfx/redbot-wraith")
+        embed.set_footer(text="レイス - \"Everything you can imagine is real.\"")
         embed.set_image(url=images[i])
         await ctx.send(embed=embed)
 
@@ -448,17 +413,13 @@ class Roleplay(BaseCog):
 
         author = ctx.message.author
         images = await self.config.smug()
-
-        smug = await self.fetch_nekos_life(ctx, "smug")
-        images.extend(smug)
-
         mn = len(images)
         i = randint(0, mn - 1)
 
         # Build Embed
         embed = discord.Embed()
         embed.description = f"**{author.mention} is smug**"
-        embed.set_footer(text="https://github.com/wraithfx/redbot-wraith")
+        embed.set_footer(text="レイス - \"Everything you can imagine is real.\"")
         embed.set_image(url=images[i])
         await ctx.send(embed=embed)
        
@@ -475,7 +436,7 @@ class Roleplay(BaseCog):
         # Build Embed
         embed = discord.Embed()
         embed.description = f"**{author.mention} kills {user.mention}**"
-        embed.set_footer(text="https://github.com/wraithfx/redbot-wraith")
+        embed.set_footer(text="レイス - \"Everything you can imagine is real.\"")
         embed.set_image(url=images[i])
         await ctx.send(embed=embed)
 
@@ -492,20 +453,6 @@ class Roleplay(BaseCog):
         # Build Embed
         embed = discord.Embed()
         embed.description = f"**{author.mention} punches {user.mention}**"
-        embed.set_footer(text="https://github.com/wraithfx/redbot-wraith")
+        embed.set_footer(text="レイス - \"Everything you can imagine is real.\"")
         embed.set_image(url=images[i])
         await ctx.send(embed=embed)
-
-    async def fetch_nekos_life(self, ctx, rp_action):
-
-        async with aiohttp.ClientSession() as session:
-            async with session.get(f"https://api.nekos.dev/api/v3/images/sfw/gif/{rp_action}/?count=20") as resp:
-                try:
-                    content = await resp.json(content_type=None)
-                except (ValueError, aiohttp.ContentTypeError) as ex:
-                    log.debug("Pruned by exception, error below:")
-                    log.debug(ex)
-                    return []
-
-        if content["data"]["status"]["code"] == 200:
-            return content["data"]["response"]["urls"]
