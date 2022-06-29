@@ -4,7 +4,7 @@
 
 `[pfx]` is your prefix.
 
-`[pfx]repo add wraith-cogs https://github.com/wraithfx/wraith-cogs/`
+`[pfx]repo add wraith-cogs https://github.com/madebywraith/wraith-cogs/`
 
 `[pfx]cog install wraith-cogs <cog-name>`
 
