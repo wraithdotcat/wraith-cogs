@@ -234,6 +234,7 @@ class ReactTickets(commands.Cog):
             colour=await ctx.embed_colour(),
             title=f"{ctx.guild.name} Tickets",
             description=description,
+            set_image(url="https://i.imgur.com/xxDZkpJ.gif"),
         )
         msg = await channel.send(embed=embed)
         await self._add_reactions(msg, self._get_emoji_list(cases))
