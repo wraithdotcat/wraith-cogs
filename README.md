@@ -1,27 +1,27 @@
-<img src="https://github.com/wraithfx/wraith-cogs/blob/main/assets/wraith-title.png" width="100%">
+<img src="https://github.com/wraithdotcat/wraith-cogs/blob/main/assets/wraith-title.png" width="100%">
 
 # How to install
 
-`[pfx]` is your prefix.
+`[p]` is your prefix.
 
-`[pfx]repo add wraith-cogs https://github.com/wraithdotcat/wraith-cogs/`
+`[p]repo add wraith-cogs https://github.com/wraithdotcat/wraith-cogs/`
 
-`[pfx]cog install wraith-cogs <cog-name>`
+`[p]cog install wraith-cogs <cog-name>`
 
 # Included Cogs
 
 ### Roleplay
 
-* `[pfx]cuddle` - Cuddles a user.
-* `[pfx]poke` - Pokes a user.
-* `[pfx]tickle` - Tickles a user.
-* `[pfx]feed` - Feeds a user.
-* `[pfx]highfive` - High-fives a user.
-* `[pfx]hugs` - Hugs a user.
-* `[pfx]kiss` - Kisses a user.
-* `[pfx]lick` - Licks a user.
-* `[pfx]pat` - Pats a user.
-* `[pfx]slap` - Slaps a user.
-* `[pfx]punch` - Punches a user.
-* `[pfx]kill` - Kills a user.
-* `[pfx]smug` - Be smug towards a user.
+* `[p]cuddle` - Cuddles a user.
+* `[p]poke` - Pokes a user.
+* `[p]tickle` - Tickles a user.
+* `[p]feed` - Feeds a user.
+* `[p]highfive` - High-fives a user.
+* `[p]hugs` - Hugs a user.
+* `[p]kiss` - Kisses a user.
+* `[p]lick` - Licks a user.
+* `[p]pat` - Pats a user.
+* `[p]slap` - Slaps a user.
+* `[p]punch` - Punches a user.
+* `[p]kill` - Kills a user.
+* `[p]smug` - Be smug towards a user.
