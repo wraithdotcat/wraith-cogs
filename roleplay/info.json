@@ -1,9 +1,7 @@
 {
-  "author" : ["Jintaku, Wraith"],
-  "bot_version": [3,0,0],
+  "author" : ["Jintaku", "Wraith"],
   "install_msg" : "Interact with users using gifs.",
   "short" : "Interact with users.",
   "description" : "Interact with users using anime gifs",
-  "tags" : ["interaction", "roleplay", "gif"],
-  "hidden" : false
+  "tags" : ["interaction", "roleplay", "gif"]
 }
