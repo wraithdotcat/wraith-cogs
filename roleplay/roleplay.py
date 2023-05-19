@@ -1,4 +1,4 @@
-imoirt json
+import json
 import discord
 from redbot.core import commands, Config
 from random import randint
