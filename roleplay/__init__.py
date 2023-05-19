@@ -1,6 +1,5 @@
-from redbot.core.bot import Red
 from .roleplay import Roleplay
 
-async def setup(bot: Red):
-    rp = Roleplay(bot)
+async def setup(bot):
+    rp = Roleplay()
     await bot.add_cog(rp)
