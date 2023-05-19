@@ -1,7 +1,7 @@
 {
-  "author" : ["Jintaku", "Wraith"],
-  "install_msg" : "Interact with users using gifs.",
-  "short" : "Interact with users.",
-  "description" : "Interact with users using anime gifs",
-  "tags" : ["interaction", "roleplay", "gif"]
+    "author": ["Jintaku", "Wraith"],
+    "install_msg": "Interact with users using gifs.",
+    "short": "Interact with users.",
+    "description": "Interact with users using anime gifs",
+    "tags": ["interaction", "roleplay", "gif"]
 }

@@ -1,7 +1,7 @@
 {
-    "author" : ["Wraith"],
-    "install_msg" : "Wraith's repository has been successfully added.",
-    "name" : "RedBot-Wraith",
-    "short" : "Cogs that have been created/edited by Wraith.",
-    "description" : "This repo holds all of the cogs that have been either created or edited by Wraith."
+    "author": ["Wraith"],
+    "install_msg": "Wraith's repository has been successfully added.",
+    "name": "RedBot-Wraith",
+    "short": "Cogs that have been created/edited by Wraith.",
+    "description": "This repo holds all of the cogs that have been either created or edited by Wraith."
 }
