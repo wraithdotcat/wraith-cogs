@@ -1,3 +1,4 @@
+import os
 import json
 import discord
 from redbot.core import commands, Config
@@ -23,7 +24,12 @@ class Roleplay(BaseCog):
 
     def __init__(self):
         self.config = Config.get_conf(self, identifier=842364413)
-        with open("./images.json") as file:
+
+        absolute_path = os.path.dirname(__file__)
+        relative_file = "images.json"
+        full_path = os.path.join(absolute_path, relative_file)
+
+        with open(full_path) as file:
             images = json.load(file)
 
         self.config.register_global(**images)
