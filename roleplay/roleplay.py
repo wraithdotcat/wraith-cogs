@@ -23,7 +23,7 @@ class Roleplay(BaseCog):
 
     def __init__(self):
         self.config = Config.get_conf(self, identifier=842364413)
-        with open("images.json") as file:
+        with open("./images.json") as file:
             images = json.load(file)
 
         self.config.register_global(**images)
